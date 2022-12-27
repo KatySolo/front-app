@@ -2,11 +2,11 @@ import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/t
 import formReducer from './reducers/form'
 
 const rootReducer = combineReducers({
-    form: formReducer
+  form: formReducer
 })
 
 export const store = configureStore({
-    reducer: rootReducer
+  reducer: rootReducer
 })
 
 export type AppDispatch = typeof store.dispatch

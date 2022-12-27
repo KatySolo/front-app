@@ -50,15 +50,6 @@
                 "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]
             }
         ],
-        "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
-        "indent": [2, 4, { "SwitchCase": 1 }],
-        "space-before-function-paren": [
-            "error",
-            {
-                "anonymous": "always",
-                "named": "never",
-                "asyncArrow": "always"
-            }
-        ]
+        "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }]
     }
 }
