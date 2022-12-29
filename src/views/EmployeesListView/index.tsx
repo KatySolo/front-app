@@ -1,13 +1,12 @@
 import React from 'react'
 import { Grid } from 'semantic-ui-react'
-import commonStyles from '../../App.module.css'
 import styles from '../DepartmentsListView/DepartmentsListView.module.css'
+import { Screen } from '../../components/Screen'
 
 export const EmployeesListView: React.FC = () => {
   const employees = ['Мария А', 'Николай Б']
   return (
-        <div className={commonStyles.container}>
-        <div className={commonStyles.title}>Все сотрудники</div>
+        <Screen title={'Все сотрудники'}>
             <Grid columns={2} className={styles.table}>
                 {employees.map((item, index) =>
                     <Grid.Row key={index}>
@@ -15,6 +14,6 @@ export const EmployeesListView: React.FC = () => {
                     </Grid.Row>
                 )}
             </Grid>
-        </div>
+        </Screen>
   )
 }

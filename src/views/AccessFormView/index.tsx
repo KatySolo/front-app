@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 import { classNames } from '../../App'
-import commonStyles from '../../App.module.css'
+import { Screen } from '../../components/Screen'
 import styles from './AccessFormView.module.css'
 
 export const AccessFormView: React.FC = () => {
@@ -35,8 +35,7 @@ export const AccessFormView: React.FC = () => {
   ]
 
   return (
-      <div className={commonStyles.container}>
-        <div className={commonStyles.title}>Добавление отметки</div>
+      <Screen title={'Добавление отметки'}>
           <Form className={styles.form} size={'huge'}>
               <div className={classNames(styles.dropdown, styles.field)}>
                   <Form.Dropdown className={classNames(styles.dropdown, styles.field)}
@@ -64,6 +63,6 @@ export const AccessFormView: React.FC = () => {
               </Form.Group>
               <Form.Button size={'big'} className={styles.button}>Отправить</Form.Button>
           </Form>
-      </div>
+      </Screen>
   )
 }
