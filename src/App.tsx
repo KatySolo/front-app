@@ -4,6 +4,7 @@ import styles from './App.module.css'
 import { AccessFormView } from './views/AccessFormView'
 import { Header } from './components/Header'
 import { AddEmployeeView } from './views/AddEmployeeView'
+import { AddDepartmentView } from './views/AddDepartmentView'
 
 export function classNames (...classNames: Array<string | false | null | undefined>): string {
   return classNames.filter(Boolean).join(' ')
@@ -16,7 +17,8 @@ const App: React.FC = () => {
             <div className={styles.app}>
                 <Routes>
                     <Route path="/" element={<AccessFormView/>}/>
-                    <Route path="/addPerson" element={<AddEmployeeView />}/>
+                    <Route path="/add/person" element={<AddEmployeeView />}/>
+                    <Route path="/add/department" element={<AddDepartmentView />} />
                 </Routes>
             </div>
         </Router>
