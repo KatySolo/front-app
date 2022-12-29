@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 import { classNames } from '../../App'
+import commonStyles from '../../App.module.css'
 import styles from './AccessFormView.module.css'
 
 export const AccessFormView: React.FC = () => {
@@ -34,8 +35,8 @@ export const AccessFormView: React.FC = () => {
   ]
 
   return (
-      <div className={styles.container}>
-        <div className={styles.title}>Добавление отметки</div>
+      <div className={commonStyles.container}>
+        <div className={commonStyles.title}>Добавление отметки</div>
           <Form className={styles.form} size={'huge'}>
               <div className={classNames(styles.dropdown, styles.field)}>
                   <Form.Dropdown className={classNames(styles.dropdown, styles.field)}
