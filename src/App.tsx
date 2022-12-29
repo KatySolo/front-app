@@ -7,6 +7,7 @@ import { Header } from './components/Header'
 import { AddEmployeeView } from './views/AddEmployeeView'
 import { AddDepartmentView } from './views/AddDepartmentView'
 import { DepartmentsListView } from './views/DepartmentsListView'
+import { EmployeesListView } from './views/EmployeesListView'
 
 export function classNames (...classNames: Array<string | false | null | undefined>): string {
   return classNames.filter(Boolean).join(' ')
@@ -48,6 +49,11 @@ const App: React.FC = () => {
                             Добавить сотрудника
                         </Link>
                     </Menu.Item>
+                    <Menu.Item as='div'>
+                        <Link to={'/employees'}>
+                            Все сотрудники
+                        </Link>
+                    </Menu.Item>
                 </Sidebar>
                 <Sidebar.Pusher dimmed={visible}>
                     <Header onMenuClick={() => setVisible(true)}/>
@@ -57,6 +63,7 @@ const App: React.FC = () => {
                             <Route path="/add/person" element={<AddEmployeeView/>}/>
                             <Route path="/add/department" element={<AddDepartmentView/>}/>
                             <Route path="/departments" element={<DepartmentsListView />}/>
+                            <Route path="/employees" element={<EmployeesListView />} />
                         </Routes>
                     </div>
                 </Sidebar.Pusher>
